@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const Product = require('../data/Producto');
+const {readJSON,writeJSON} = require("../data/read_modify");
+const { log } = require('console');
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -25,20 +28,16 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
+		
+		const newProduct = new Product(req.body)
+		 newProduct.image = req.file.originalname
+        const todos_los_Productos = readJSON("productsDataBase.json")
+		todos_los_Productos.push(newProduct)
+		writeJSON(todos_los_Productos,"productsDataBase.json")
+		
+        return res.send(req.file)
 
-
-			 const sendString = `--name :${ req.body.name}--
-			 \n--Price:
-			 ${ req.body.price}--
-			 \n--Discount:
-			 ${req.body.discount}--
-			 \n--Category:
-			 ${req.body.category}--
-			 \n--Description:
-			 ${req.body.description}`
-
-	
-		res.send(sendString)
+		//res.send("producto creado")
 	},
 
 	// Update - Form to edit
@@ -55,14 +54,11 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		try{
-		let id = req.params.id
-		console.log(id)
-		}
-		catch(err){
-			console.log("error")
-		}
-		res.send("Producto eliminado")
+		
+		const productsModify = products.filter(product => product.id != req.params.id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(productsModify, null, 3), 'utf8');
+		return res.redirect('/products');
+
 	}
 };
 
