@@ -38,7 +38,6 @@ const controller = {
 		
         return res.send(req.file)
 
-		//res.send("producto creado")
 	},
 
 	// Update - Form to edit
@@ -49,7 +48,15 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-
+       const fileName = "img-sony-blueray.jpg"
+	   try{
+		file = req.file.originalname
+	   }
+	   catch(err){
+            console.log(" no hay imagen");
+	   }
+	  
+	   console.log("cat",req.body.category)
 	   const modified = products.map( producto =>{
                 //console.log( producto.id == req.params.id)
 			if (producto.id == req.params.id){
@@ -58,18 +65,15 @@ const controller = {
 				producto.price = req.body.price
 				producto.discount = req.body.discount
                 producto.description = req.body.description
-				producto.category = req.body.category ? req.body.category : "none"
-				//producto.image = req.file.originalname ? req.file.originalname : "none.jpg"
+				producto.category = req.body.category ? req.body.category : "visited"
+				producto.image = fileName
 			}
 			return producto
 		})
 
 		 console.log(modified)
-		 writeJSON(modified,"productsDataBase.json")
-		/*fs.writeFileSync(productsFilePath, JSON.stringify(modified, null, 3), 'utf8');
-		return res.redirect('/products'); */
-
-		 //console.log(modified)
+		 writeJSON(modified,"productsDataBase.json") 
+		
 		res.redirect("/products")
 
 	},

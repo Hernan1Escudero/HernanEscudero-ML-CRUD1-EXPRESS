@@ -1,12 +1,12 @@
 [
    {
       "id": 1,
-      "name": "Cafetera Moulinex Dolce Gusto  Amargo",
+      "name": "Cafetera Moulinex Dolce Gusto Dulce",
       "price": "13",
       "discount": "23",
       "category": "visited",
-      "description": "Este  producto fue modificado",
-      "image": "img-cafetera-moulinex.jpg"
+      "description": "Este  producto fue modificado otra vez",
+      "image": "img-sony-blueray.jpg"
    },
    {
       "id": 2,
