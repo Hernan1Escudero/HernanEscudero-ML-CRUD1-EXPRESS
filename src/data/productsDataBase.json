@@ -1,11 +1,11 @@
 [
    {
       "id": 1,
-      "name": "Cafetera Moulinex Dolce Gusto Edited",
-      "price": 100,
-      "discount": 50,
+      "name": "Cafetera Moulinex Dolce Gusto  Amargo",
+      "price": "13",
+      "discount": "23",
       "category": "visited",
-      "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+      "description": "Este  producto fue modificado",
       "image": "img-cafetera-moulinex.jpg"
    },
    {
@@ -142,118 +142,5 @@
       "category": "in-sale",
       "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
       "image": "img-parlante-sony.jpg"
-   },
-   {
-      "id": 17,
-      "name": "",
-      "price": "",
-      "description": "",
-      "category": "",
-      "discount": ""
-   },
-   {
-      "id": 18,
-      "name": "fsdfsdfsdf",
-      "price": "13zxcvzxcv",
-      "description": "aasdfsdfs",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 19,
-      "name": "fsdfsdfsdf",
-      "price": "13zxcvzxcv",
-      "description": "aasdfsdfs",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 20,
-      "name": "fsdfsdfsdf",
-      "price": "13zxcvzxcv",
-      "description": "aasdfsdfs",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 21,
-      "name": "fsdfsdfsdf",
-      "price": "13zxcvzxcv",
-      "description": "aasdfsdfs",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 22,
-      "name": "fsdfsdfsdf",
-      "price": "13zxcvzxcv",
-      "description": "aasdfsdfs",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 23,
-      "name": "coco",
-      "price": "13zxcvzxcv",
-      "description": "wqwrqwe",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23"
-   },
-   {
-      "id": 24,
-      "name": "coco",
-      "price": "13zxcvzxcv",
-      "description": "wqwrqwe",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23"
-   },
-   {
-      "id": 25,
-      "name": "coco",
-      "price": "13zxcvzxcv",
-      "description": "wqwrqwe",
-      "image": "emilia-about.jpg",
-      "category": "in-sale",
-      "discount": "23"
-   },
-   {
-      "id": 26,
-      "name": "emilia",
-      "price": "13zxcvzxcv",
-      "description": "ewerwer",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 27,
-      "name": "emilia",
-      "price": "13zxcvzxcv",
-      "description": "ewerwer",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 28,
-      "name": "emilia",
-      "price": "13zxcvzxcv",
-      "description": "ewerwer",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
-   },
-   {
-      "id": 29,
-      "name": "emilia",
-      "price": "13zxcvzxcv",
-      "description": "ewerwer",
-      "image": "emilia-play-list.png",
-      "category": "in-sale",
-      "discount": "23xvzxcvz"
    }
 ]

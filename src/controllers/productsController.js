@@ -12,7 +12,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
-		res.render("products",{productos: products})
+		let all_products = readJSON("productsDataBase.json")
+		res.render("products",{productos: all_products})
 	},
 
 	detail: (req, res) => {
@@ -48,8 +49,29 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		let name = req.body.name
-		res.send("updateado"+" "+name)
+
+	   const modified = products.map( producto =>{
+                //console.log( producto.id == req.params.id)
+			if (producto.id == req.params.id){
+				
+				producto.name =  req.body.name
+				producto.price = req.body.price
+				producto.discount = req.body.discount
+                producto.description = req.body.description
+				producto.category = req.body.category ? req.body.category : "none"
+				//producto.image = req.file.originalname ? req.file.originalname : "none.jpg"
+			}
+			return producto
+		})
+
+		 console.log(modified)
+		 writeJSON(modified,"productsDataBase.json")
+		/*fs.writeFileSync(productsFilePath, JSON.stringify(modified, null, 3), 'utf8');
+		return res.redirect('/products'); */
+
+		 //console.log(modified)
+		res.redirect("/products")
+
 	},
 
 	// Delete - Delete one product from DB

@@ -19,7 +19,7 @@ router.get('/', productsController.index);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit); 
-router.put('/', productsController.update); 
+router.put('/edit/:id',upload.single('image'), productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
